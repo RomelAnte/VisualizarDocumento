@@ -1,0 +1,183 @@
+/* --- Variables de Color (Extraídas de tu imagen) --- */
+:root {
+    --bg-body: #F5F5FA;
+    --bg-card: #FFFFFF;
+    --primary-text: #1a1a1a;
+    --secondary-text: #666666;
+    --accent-blue: #2F80ED; /* Color del botón */
+    --accent-purple-start: #4F46E5; /* Gradiente barra */
+    --accent-purple-end: #9333EA;
+    --shadow: 0 4px 20px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--primary-text);
+    /* Clamp para padding lateral: mínimo 1rem, ideal 5%, máximo 10rem */
+    padding: clamp(1rem, 3vw, 3rem);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal centrado */
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* --- 1. Tarjeta de Perfil (Header) --- */
+.profile-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.profile-info h1 {
+    /* Clamp: Mínimo 24px, escala con el ancho, Máximo 32px */
+    font-size: clamp(1.5rem, 4vw, 2rem); 
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.detail-item i {
+    color: #888;
+    width: 20px;
+    text-align: center;
+}
+
+/* Botón de descarga */
+.btn-download {
+    background-color: var(--accent-blue);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-download:hover {
+    background-color: #2563eb;
+}
+
+/* --- 2. Visor de PDF --- */
+.pdf-section {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Para que el header no se salga de los bordes redondeados */
+    margin-bottom: 2rem;
+}
+
+.pdf-header-bar {
+    /* Gradiente estilo Figma */
+    background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-purple-end) 100%);
+    padding: 1rem 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.pdf-container {
+    background-color: #2c2c2c; /* Fondo oscuro del visor */
+    width: 100%;
+    height: clamp(400px, 60vh, 800px); /* Altura responsiva */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nota al pie del PDF */
+.pdf-footer-note {
+    padding: 1.5rem;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+/* Iframe para simular el PDF */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- 3. Contacto --- */
+.contact-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+/* --- Footer General --- */
+.site-footer {
+    text-align: center;
+    color: #999;
+    font-size: 0.85rem;
+    padding-bottom: 1rem;
+    margin-top: auto;
+}
+
+/* Media Query para móviles (apila el botón debajo del nombre) */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: stretch; /* Botón ancho completo */
+    }
+    .btn-download {
+        justify-content: center;
+    }
+}

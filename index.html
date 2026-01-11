@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Documento Académico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <main class="main-container">
+        
+        <header class="profile-card">
+            <div class="profile-info">
+                <h1>María Alejandra Rodríguez García</h1>
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Ingeniería de Software - Nivel 5</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-university"></i>
+                        <span>Universidad Nacional de Tecnología</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-id-card"></i>
+                        <span>ID: 2024-EST-1234</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="ruta-a-tu-documento.pdf" download class="btn-download">
+                <i class="fa-solid fa-download"></i> Descargar PDF
+            </a>
+        </header>
+
+        <section class="pdf-section">
+            <div class="pdf-header-bar">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span>Documento Académico</span>
+            </div>
+
+            <div class="pdf-container">
+                <iframe src="sample.pdf#toolbar=0" title="Visor PDF">
+                    <p style="color: white;">Tu navegador no soporta PDFs.</p>
+                </iframe>
+            </div>
+
+            <div class="pdf-footer-note">
+                Nota: Si el PDF no se visualiza correctamente, puedes descargarlo usando el botón "Descargar PDF" en la parte superior.
+            </div>
+        </section>
+
+        <section class="contact-card">
+            <h3>Información de Contacto</h3>
+            <p>Email: <a href="mailto:maria.rodriguez@example.com">maria.rodriguez@example.com</a></p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Universidad Nacional de Tecnología. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
