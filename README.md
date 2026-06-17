@@ -56,4 +56,4 @@ Este proyecto es de uso personal.
 
 ---
 
-Hecho con ❤️ por Mateo Quishpe
+Hecho con ❤️ por Romel Ante
